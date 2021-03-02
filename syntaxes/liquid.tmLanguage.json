@@ -159,7 +159,7 @@
 			
 			{
 				"begin":"comment",
-				"end":"endcomment",
+				"end":"endcomment\\-*",
 				"name": "comment.block.liquid"
 			},
 			{
@@ -172,7 +172,7 @@
 				"name": "entity.name.tag.liquid"
 			},
 			{
-				"match": "(assign|export|function|graphql|hash_assign|include|include_form|log|print|redirect_to|response_status|return|session|spam_protection|yield)",
+				"match": "(assign|export|function|graphql|hash_assign|render|include|include_form|log|print|redirect_to|response_status|return|session|spam_protection|yield)",
 				"name": "entity.name.tag.liquid"
 			},
 			{
