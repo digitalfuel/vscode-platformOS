@@ -387,20 +387,23 @@
 		"description": "Full list of form_configurations attributes"
 	},
 
+	// ---------------- START LIQUID ----------------
 
-
+	// COMMENT
 	"Liquid: Comment": {
 		"prefix": "{%:comment",
 		"body": "{%- comment -%} $0 {%- endcomment -%}",
 		"description": "Comment"
 	},
+
+	// RAW
 	"Liquid: Raw": {
 		"prefix": "{%:raw",
 		"body": "{%- raw -%}$1{%- endraw -%}",
 		"description": "Raw"
 	},
 
-
+	// TAGS VARIABLES
 	"Liquid Tags: Var Assign": {
 		"prefix": "{%:assign",
 		"body": "{%- assign ${1:my_varibale} = $2 -%}",
@@ -421,7 +424,8 @@
 		"body": "{%- decrement $1 -%}",
 		"description": "decrement variable"
 	},
-
+	
+	// TAGS FLOW CONTROL
 	"Liquid Tags: Flow Control If": {
 		"prefix": "{%:if",
 		"body": [
@@ -480,6 +484,7 @@
 		"description": "Unless logic"
 	},
 
+	// TAGS LOOPS
 	"Liquid Tags: Loops For": {
 		"prefix": "{%:for",
 		"body": [
@@ -546,6 +551,7 @@
 		"description": "tablerow column only"
 	},
 
+	// TAGS THEME
 	"Liquid Tags: liquid": {
 		"prefix": "{%:liquid",
 		"body": [
@@ -557,6 +563,8 @@
 		],
 		"description": "Render"
 	},
+
+	// TAGS RENDER (INCLUDES)
 	"Liquid Tags: Render": {
 		"prefix": "{%:render",
 		"body": "{%- render '$1' -%}",
@@ -583,7 +591,29 @@
 		"description": "Include_form This tag should be used to render forms defined in app/forms."
 	},
 
+	//  MARKUP VARIABLES
+	"Liquid Var Layout": {
+		"prefix": "{{:layout",
+		"body": "{{- content_for_layout -}}",
+		"description": "Adds specified content to Layout"
+	},
+	"Liquid Var asset_url Access": {
+		"prefix": "{{:asset_url",
+		"body": "{{- '${1:path/file.ext}' | asset_url -}}",
+		"description": "Accessing Assets - returns (String) - url to the physical file if existing, root asset url otherwise"
+	},
+	"Liquid Var Assets Check": {
+		"prefix": "{{:asset_url:list",
+		"body": "{{- asset_url -}}",
+		"description": "Use {{ asset_url }} variable to check your assets. This will list the full URL of your assets on our content delivery network, including the time of the latest update (used for caching)."
+	},
+	"Liquid Var random_string": {
+		"prefix": "{{:random_string",
+		"body": "{{- ${0:length (Int) default '12' | random_string -}}",
+		"description": "random_string - returns (String) - returns a random alphanumeric string of given length;"
+	},
 
+	// FILTERS
 	"Liquid Filter abs": {
 		"prefix": "|:math:abs",
 		"body": "| abs",
@@ -1413,28 +1443,7 @@
 	},
 	// END PLATFORMOS FILTER
 
-
-	"Liquid Var Layout": {
-		"prefix": "{{:layout",
-		"body": "{{- content_for_layout -}}",
-		"description": "Adds specified content to Layout"
-	},
-	"Liquid Var asset_url Access": {
-		"prefix": "{{:asset_url",
-		"body": "{{- '${1:path/file.ext}' | asset_url -}}",
-		"description": "Accessing Assets - returns (String) - url to the physical file if existing, root asset url otherwise"
-	},
-	"Liquid Var Assets Check": {
-		"prefix": "{{:asset_url:list",
-		"body": "{{- asset_url -}}",
-		"description": "Use {{ asset_url }} variable to check your assets. This will list the full URL of your assets on our content delivery network, including the time of the latest update (used for caching)."
-	},
-	"Liquid Var random_string": {
-		"prefix": "{{:random_string",
-		"body": "{{- ${0:length (Int) default '12' | random_string -}}",
-		"description": "random_string - returns (String) - returns a random alphanumeric string of given length;"
-	},
-
+	// TAGS PLATFORMOS
 	"Liquid pOS Tags: background": {
 		"prefix": "{%:background",
 		"body": "{%- background '${1:options hash}' -%}",
@@ -1544,16 +1553,10 @@
 		"body": "{%- yield '${0:Content_for name}' -%}",
 		"description": "yield Execute code wrapped inside content_for {% content_for 'content_for_name' %}"
 	},
+	// ---------------- END LIQUID ----------------
 
-
-	// START LIQUID TAG THEME
-
-	"Liquid Theme: Echo": {
-		"prefix": " echo",
-		"body": "echo $1",
-		"description": "Liquid Theme Tag Echo"
-	},
-
+	// ---------------- START LIQUID TAG THEME ----------------
+	// COMMENT
 	"Liquid Theme: Comment": {
 		"prefix": " comment",
 		"body": [
@@ -1565,23 +1568,25 @@
 		],
 		"description": "Liquid Theme Tag Comment"
 	},
-	
-	"Liquid Theme Tags: Theme Var Assign": {
+
+	// TAGS VARIABLES
+	"Liquid Theme Tags: Var Assign": {
 		"prefix": "assign",
 		"body": "assign ${1:my_varibale} = $2",
 		"description": "Liquid Theme Tag Assign variable"
 	},
-	"Liquid Theme Tags: Theme Var Increment": {
+	"Liquid Theme Tags: Var Increment": {
 		"prefix": " increment",
 		"body": "increment $1",
 		"description": "Liquid Theme Tag increment variable"
 	},
-	"Liquid Theme Tags: Theme Var Decrement": {
+	"Liquid Theme Tags: Var Decrement": {
 		"prefix": " decrement",
 		"body": "decrement $1",
 		"description": "Liquid Theme Tag decrement variable"
 	},
 	
+	// TAGS FLOW CONTROL
 	"Liquid Theme Tags: Flow Control If": {
 		"prefix": " if",
 		"body": [
@@ -1640,6 +1645,7 @@
 		"description": "Liquid Theme Tag Unless logic"
 	},
 	
+	// TAGS LOOPS
 	"Liquid Theme Tags: Loops For": {
 		"prefix": " for",
 		"body": [
@@ -1709,12 +1715,12 @@
 		"body": "cols:$0",
 		"description": "Liquid Theme Tag tablerow column only"
 	},
-	
 	"Liquid Theme Tags: Render": {
 		"prefix": " render",
 		"body": "render '$1'",
 		"description": "Liquid Theme Tag Render"
 	},
+	// TAGS INCLUDE
 	"Liquid Theme Tags: Include": {
 		"prefix": " include",
 		"body": "include $1",
@@ -1730,12 +1736,72 @@
 		"body": "include $1 for $2",
 		"description": "Liquid Theme Tag Render partial for every item in the collection"
 	},
+
+	// TAGS THEME
+	"Liquid Theme: Echo": {
+		"prefix": " echo",
+		"body": "echo $1",
+		"description": "Liquid Theme Tag Echo"
+	},
+    
+	// TAGS PLATFORMOS
+	"Liquid Theme pOS Tags: background": {
+		"prefix": " background",
+		"body": "background '${1:options hash}'",
+		"description": "Invokes code within the tag asynchronously, in the background. You will only have access to variables you explicitly pass to the background tag."
+	},
+	"Liquid Theme pOS Tags: cache": {
+		"prefix": " cache",
+		"body": [
+			"cache",
+			"\t'${1:key}', expire: ${2:integer}, $3",
+			"endcache",
+		],
+		"description": "Checks if there's html cached for the given key. If yes, it just returns the value without processing anything inside the cache tag, otherwise it executes code, stores the result in the cache."
+	},
+	"Liquid Theme pOS Tags: content_for": {
+		"prefix": " content_for",
+		"body": [
+			"content_for",
+			"\t'${1:Yield}' $2",
+			"endcontent_for"
+		],
+		"description": "Adds specified content to Layout"
+	},
+	"Liquid Theme pOS Tags: export": {
+		"prefix": " export",
+		"body": "export ${1:variable_names}, namespace: '${2:namespace}'",
+		"description": "Exports and makes avaiable variables from an include with local scope outside the partial. Used in conjunction with context.exports"
+	},
+	"Liquid Theme pOS Tags: form": {
+		"prefix": " form",
+		"body": [
+			"form html-id: '${1:someid}', html-novalidate: true, html-class: '${2:class}', html-data-user-id: '${3:someid}', html-multipart: false ",
+			"\t{{ form_builder }}",
+			"endform"
+		],
+		"description": "used to generate a html form element for a resource. Use within form configuration. Inside the tag you can use form_builder variable."
+	},
+	"Liquid Theme pOS Tags: function": {
+		"prefix": " function",
+		"body": "function ${1:my_varibale} = $2",
+		"description": "Allows to store a variable returned by a partial. Partial needs to return data with `return` tag."
+	},
+	"Liquid Theme pOS Tags: graphql": {
+		"prefix": " graphql",
+		"body": "graphql \"${1:query_name}\", result_name: \"${2:default g}\"",
+		"description": "execute GraphQL query stored in a file or invoke GraphQL query inline."
+	},
+	"Liquid Theme pOS Tags: hash_assign": {
+		"prefix": " hash_assign",
+		"body": "hash_assign ${1:my_variable[\"a\"][\"b\"]}",
+		"description": "Allows to easily modify a Hash with a syntax same as assign tag."
+	},
 	"Liquid Theme Tags: Include Form": {
 		"prefix": " include_form",
 		"body": "include_form '${1:form_config Name}', resource_id: ${2:Resource id eg user.id}, parent_resource_id: '${3:Resource type eg custom_model_type}'",
 		"description": "Liquid Theme Tag Include_form This tag should be used to render forms defined in app/forms."
 	},
-
 	"Liquid Theme pOS Tags: log": {
 		"prefix": " log",
 		"body": "log ${1:any object to be printed}, type: '${2|error,info,debug|}'",
@@ -1761,9 +1827,28 @@
 		"body": "return ${1:variable}",
 		"description": "Used inside a partial invoked by a function tag to return a variable"
 	},
-	
-	// END LIQUID TAG THEME
+	"Liquid Theme pOS Tags: session": {
+		"prefix": " session",
+		"body": "session ${1:variable} = ${2:data}",
+		"description": "stores data during user's session Sets field of given name to given value in context.session"
+	},
+	"Liquid Theme pOS Tags: spam_protection default": {
+		"prefix": " spam_protection_default",
+		"body": "spam_protection",
+		"description": "spam_protection Generates html for recaptcha_v2 spam protection"
+	},
+	"Liquid Theme pOS Tags: spam_protection": {
+		"prefix": " spam_protection",
+		"body": "spam_protection \"${1:strategy}\", action: \"${2:action}\"",
+		"description": "spam_protection Generates html for recaptcha spam protection"
+	},
+	"Liquid Theme pOS Tags: yield": {
+		"prefix": " yield",
+		"body": "yield '${0:Content_for name}'",
+		"description": "yield Execute code wrapped inside content_for {% content_for 'content_for_name' %}"
+	},
 
+	// ---------------- END LIQUID TAG THEME ----------------
 
 
 	"GraphQL search page content": {
