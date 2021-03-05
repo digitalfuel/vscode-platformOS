@@ -559,7 +559,7 @@
 			"\t",
 			"\t$1",
 			"\t",
-			"-%}",
+			"-%}"
 		],
 		"description": "Render"
 	},
@@ -1755,7 +1755,7 @@
 		"body": [
 			"cache",
 			"\t'${1:key}', expire: ${2:integer}, $3",
-			"endcache",
+			"endcache"
 		],
 		"description": "Checks if there's html cached for the given key. If yes, it just returns the value without processing anything inside the cache tag, otherwise it executes code, stores the result in the cache."
 	},
