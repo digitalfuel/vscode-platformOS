@@ -1,65 +1,210 @@
-# vscode-pos-liquid README
+# platformOS - VS Code extension
+This extension adds: 
+1. Liquid markup Syntax Highlighting and supports Liquid Theme Tag
+2. Snippets for Liquid, YAML, grahpQL & marketplace-kit terminal.
 
-This is the README for your extension "vscode-pos-liquid". After writing up a brief description, we recommend including the following sections.
+Visual Studio Marketplace link: [https://marketplace.visualstudio.com/items?itemName=digitalfuel.vscode-platformOS](https://marketplace.visualstudio.com/items?itemName=digitalfuel.vscode-platformOS)
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Preview (currently unavailable)
+![Showcase](./images/showcase.gif)
 
 ## Requirements
+1. Install the latest Visual Studio Code
+<!-- ## Dependencies -->
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Installation (Coming Soon)
+1. Launch Code
+2. From the command palette `Ctrl`-`Shift`-`P` (Windows, Linux) or `Cmd`-`Shift`-`P` (OSX)
+3. Type `ext install vscode-platformOS`
+4. Reload Visual Studio Code
 
-## Extension Settings
+## Installation (Manual)
+1. Download zip
+2. From the command palette `Ctrl`-`Shift`-`P` (Windows, Linux) or `Cmd`-`Shift`-`P` (OSX)
+3. Type `snippets` select `Preferences: Configure User Snippets` then select `liquid.json (Liquid HTML)` from the list
+4. Copy and paste code from the zip in `/snippets/liquid.json` into your liquid user snippets
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Emmet Enable
+Go to user settings and add the following:
+```
+"emmet.includeLanguages": { "liquid": "html" },
+"files.associations": {
+        "*.liquid": "liquid"
+    },
+```
 
-For example:
+## Usage
+Type part of a snippet, press `enter`, and the snippet unfolds.
 
-This extension contributes the following settings:
+Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+#### Liquid
+Whitespace control is add for all snippets. And can be removed when needed by deleting the - inside liquid tags.
 
-## Known Issues
+## Terminal ( ?: )
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### Marketplace-kit
+```javascript
+Install/Update
+Test (show version)
+Initialize
+Add environment
+List environments
+Deploy
+Deploy with force
+Sync
+GUI
+```
 
-## Release Notes
+## YAML ( ---: )
 
-Users appreciate release notes as you update your extension.
+### Preferences
+```javascript
+Page
+Metadata
+Response Headers
+user_profile_types
+transactable_types
+order_types
+custom_model_types
+notifications email, SMS , API
+authorization_policies
+form_configurations
+    - default_payload
+    - validation
+    - translations
+```
 
-### 1.0.0
+## Liquid ( {%:, {{:, |:, %: )
 
-Initial release of ...
+### Comment Tag
+```javascript
+comment
+```
 
-### 1.0.1
+### Control Flow Tag
+```javascript
+if
+else
+elsif
+ifelse
+unless
+case
+when
+```
 
-Fixed issue #.
+### Iteration Tag
+```javascript
+cycle
+cyclegroup
+for
+limit       // For loops option
+offset      // For loops option
+reversed    // For loops option
+break
+continue
+tablerow
+```
 
-### 1.1.0
+### Variable Tag
+```javascript
+assign
+increment
+decrement
+capture
+```
 
-Added features X, Y, and Z.
+### Theme Tag
+```javascript
+liquid
+render
+include // deprecated
+includewith    // Theme Tag {% include %} with parameters
+includefor    // Theme Tag {% include %} with parameters
+raw
+```
 
------------------------------------------------------------------------------------------------------------
+### Array Filter
+```javascript
+join
+first
+last
+concat
+map
+reverse
+size
+sort
+uniq
+```
 
-## Working with Markdown
+### Math Filter
+```javascript
+abs
+ceil
+divided_by
+floor
+minus
+plus
+round
+times
+modulo
+```
 
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+### Money Filter
+```javascript
+To Come
+```
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+### String Filter
+```javascript
+append
+camelcase
+captialize
+downcase
+escape
+handleize
+md5
+newline_to_br
+pluralize
+prepend
+remove
+remove_first
+replace
+replace_first
+slice
+slice_single   // String Filter 'slice' with single parameter
+split
+strip
+lstrip
+rstrip
+strip_html
+strip_newlines
+truncate
+truncatewords
+upcase
+url_encode
+url_escape
+url_param_escape
+```
 
-### For more information
+## GraphQL ( gql )
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+### Example snippets
+```javascript
+Search page content
+```
 
-**Enjoy!**
+## Console.log ( clog )
+
+### Example snippets
+```javascript
+Form Builder
+```
+
+## Release
+
+### 0.0.1
+- platform-OS - Use at your own risk
+
+## License
+MIT

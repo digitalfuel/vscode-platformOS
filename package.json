@@ -1,22 +1,42 @@
 {
-    "name": "vscode-pos-liquid",
-    "displayName": "PlatformOS liquid Language Support",
-    "description": "PlatformOS Liquid language Syntax Highlighter for Visual Studio Code.",
+    "name": "vscode-pos",
+    "displayName": "PlatformOS",
+    "description": "PlatformOS Syntax Highlighter and snippets for Visual Studio Code.",
     "version": "0.0.1",
     "publisher": "digitalfuel",
+    "icon": "images/plaform-os-icon.png",
+    "galleryBanner": {
+        "color": "##eff1f3",
+        "theme": "light"
+    },
     "engines": {
         "vscode": "^1.53.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
+    ],
+    "keywords": [
+        "snippets",
+        "liquid",
+		"YAML",
+		"pos-cli",
+        "platformOS",
+		"pOS"
     ],
     "contributes": {
         "languages": [{
             "id": "pos-liquid",
-            "aliases": ["HTML pos-liquid", "pos-liquid"],
+            "aliases": ["HTML pos-liquid", "pos-liquid", "liquid"],
             "extensions": [".liquid"],
             "configuration": "./language-configuration.json"
         }],
+        "snippets": [
+            {
+                "language": "pos-liquid",
+                "path": "./snippets/liquid.json"
+            }
+        ],
         "grammars": [{
             "language": "pos-liquid",
             "scopeName": "text.html.liquid",
