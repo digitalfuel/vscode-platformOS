@@ -42,5 +42,6 @@
             "scopeName": "text.html.liquid",
             "path": "./syntaxes/liquid.tmLanguage.json"
         }]
-    }
+    },
+    "repository": "https://github.com/digitalfuel/vscode-platformOS"
 }
