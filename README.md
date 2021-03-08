@@ -5,24 +5,21 @@ This extension adds:
 
 Visual Studio Marketplace link: [https://marketplace.visualstudio.com/items?itemName=digitalfuel.vscode-platformOS](https://marketplace.visualstudio.com/items?itemName=digitalfuel.vscode-platformOS)
 
-## Preview (currently unavailable)
-![Showcase](./images/showcase.gif)
+<!-- ## Preview (currently unavailable)
+![Showcase](./images/showcase.gif) -->
 
 ## Requirements
 1. Install the latest Visual Studio Code
 <!-- ## Dependencies -->
 
-## Installation (Coming Soon)
-1. Launch Code
-2. From the command palette `Ctrl`-`Shift`-`P` (Windows, Linux) or `Cmd`-`Shift`-`P` (OSX)
-3. Type `ext install vscode-platformOS`
-4. Reload Visual Studio Code
+This extension is available for free in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com)
 
-## Installation (Manual)
-1. Download zip
-2. From the command palette `Ctrl`-`Shift`-`P` (Windows, Linux) or `Cmd`-`Shift`-`P` (OSX)
-3. Type `snippets` select `Preferences: Configure User Snippets` then select `liquid.json (Liquid HTML)` from the list
-4. Copy and paste code from the zip in `/snippets/liquid.json` into your liquid user snippets
+## Installation
+1. Launch VS Code
+2. From the command palette `Ctrl`-`Shift`-`X` (Windows, Linux) or `Cmd`-`Shift`-`X` (OSX)
+3. Search `platformOS`
+4. Click to install
+5. Configure File Association for '.liquid' to `HTML pos-liquid` from the **Change Language Mode** `(Ctrl+K M)`, when a `.liquid` file is in focus.
 
 ## Emmet Enable
 Go to user settings and add the following:
@@ -203,7 +200,7 @@ Form Builder
 
 ## Release
 
-### 0.0.1
+### 0.0.4
 - platform-OS - Use at your own risk
 
 ## License
