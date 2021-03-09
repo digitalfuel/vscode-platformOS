@@ -2,7 +2,7 @@
     "name": "vscode-platformos",
     "displayName": "PlatformOS",
     "description": "PlatformOS Syntax Highlighter and snippets for Visual Studio Code.",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "digitalfuel",
     "icon": "images/pos-icon.png",
     "galleryBanner": {
