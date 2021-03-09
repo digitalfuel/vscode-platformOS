@@ -1499,7 +1499,7 @@
 	},
 	"Liquid pOS Tags: log": {
 		"prefix": "{%:log",
-		"body": "{%- log ${1:any object to be printed}, type: '${2|error,info,debug|}' -%}",
+		"body": "{%- log ${1:any object to be printed}, type: '${2|error,info,debug|}', env: '${3|staging,production,all|}' -%}",
 		"description": "log Print any information to instance logs"
 	},
 	"Liquid pOS Tags: parse_json": {
@@ -1804,7 +1804,7 @@
 	},
 	"Liquid Theme pOS Tags: log": {
 		"prefix": "`log",
-		"body": "log ${1:any object to be printed}, type: '${2|error,info,debug|}'",
+		"body": "log ${1:any object to be printed}, type: '${2|error,info,debug|}', env: '${3|staging,production,all|}'",
 		"description": "log Print any information to instance logs"
 	},
 	"Liquid Theme pOS Tags: print": {
