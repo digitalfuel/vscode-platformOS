@@ -1558,7 +1558,7 @@
 	// ---------------- START LIQUID TAG THEME ----------------
 	// COMMENT
 	"Liquid Theme: Comment": {
-		"prefix": "`comment",
+		"prefix": "`:comment",
 		"body": [
 			"comment",
 			"---------------------------------",
@@ -1571,24 +1571,24 @@
 
 	// TAGS VARIABLES
 	"Liquid Theme Tags: Var Assign": {
-		"prefix": "assign",
+		"prefix": "`:assign",
 		"body": "assign ${1:my_varibale} = $2",
 		"description": "Liquid Theme Tag Assign variable"
 	},
 	"Liquid Theme Tags: Var Increment": {
-		"prefix": "`increment",
+		"prefix": "`:increment",
 		"body": "increment $1",
 		"description": "Liquid Theme Tag increment variable"
 	},
 	"Liquid Theme Tags: Var Decrement": {
-		"prefix": "`decrement",
+		"prefix": "`:decrement",
 		"body": "decrement $1",
 		"description": "Liquid Theme Tag decrement variable"
 	},
 	
 	// TAGS FLOW CONTROL
 	"Liquid Theme Tags: Flow Control If": {
-		"prefix": "`if",
+		"prefix": "`:if",
 		"body": [
 			"if $1 ${2|==,!=,<,>,<=,>=,contains|} $3",
 			"\t$4",
@@ -1597,17 +1597,17 @@
 		"description": "Liquid Theme Tag If Logic"
 	},
 	"Liquid Theme Tags: Flow Control Else": {
-		"prefix": "`else",
+		"prefix": "`:else",
 		"body": "else",
 		"description": "Liquid Theme Tag Else only"
 	},
 	"Liquid Theme Tags: Flow Control Else If": {
-		"prefix": "`elsif",
+		"prefix": "`:elsif",
 		"body": "elsif $1 ${2|==,!=,<,>,<=,>=,contains|} $3",
 		"description": "Liquid Theme Tag ElseIf only"
 	},
 	"Liquid Theme Tags: Flow Control If Else": {
-		"prefix": "`if:else",
+		"prefix": "`:if:else",
 		"body": [
 			"if $1 ${2|==,!=,<,>,<=,>=,contains|} $3",
 			"\t$4",
@@ -1618,7 +1618,7 @@
 		"description": "Liquid Theme Tag If | Else logic"
 	},
 	"Liquid Theme Tags: Flow Control Case": {
-		"prefix": "`case",
+		"prefix": "`:case",
 		"body": [
 			"case ${1:handle}",
 			"\twhen $2",
@@ -1628,7 +1628,7 @@
 		"description": "Liquid Theme Tag Case/when logic"
 	},
 	"Liquid Theme Tags: Flow Control When": {
-		"prefix": "`when",
+		"prefix": "`:when",
 		"body": [
 			"when $1",
 			"\t$2"
@@ -1636,7 +1636,7 @@
 		"description": "Liquid Theme Tag Case/when logic"
 	},
 	"Liquid Theme Tags: Flow Control Unless": {
-		"prefix": "`unless",
+		"prefix": "`:unless",
 		"body": [
 			"unless $1 ${2|==,!=,<,>,<=,>=,contains|} $3",
 			"\t$3",
@@ -1647,7 +1647,7 @@
 	
 	// TAGS LOOPS
 	"Liquid Theme Tags: Loops For": {
-		"prefix": "`for",
+		"prefix": "`:for",
 		"body": [
 			"for $1 in $2",
 			"\t$3",
@@ -1656,42 +1656,42 @@
 		"description": "Liquid Theme Tag For Loop iteration"
 	},
 	"Liquid Theme Tags: Loops Cycle": {
-		"prefix": "`cycle",
+		"prefix": "`:cycle",
 		"body": "cycle${1| , group|} ${2:Item 1}, ${0:Item 2}",
 		"description": "Liquid Theme Tag Cycle iteration"
 	},
 	"Liquid Theme Tags: Loops Break": {
-		"prefix": "`break",
+		"prefix": "`:break",
 		"body": "break",
 		"description": "Liquid Theme Tag for loop break iteration"
 	},
 	"Liquid Theme Tags: Loops Continue": {
-		"prefix": "`continue",
+		"prefix": "`:continue",
 		"body": "continue",
 		"description": "Liquid Theme Tag for loop continue iteration"
 	},
 	"Liquid Theme Tags: Loops Limit": {
-		"prefix": "`limit",
+		"prefix": "`:limit",
 		"body": "limit:$1",
 		"description": "Liquid Theme Tag for loop limit iteration"
 	},
 	"Liquid Theme Tags: Loops Offset": {
-		"prefix": "`offset",
+		"prefix": "`:offset",
 		"body": "offset:$1",
 		"description": "Liquid Theme Tag for loop offset iteration"
 	},
 	"Liquid Theme Tags: Loops Range": {
-		"prefix": "`range",
+		"prefix": "`:range",
 		"body": "($1..$2)",
 		"description": "Liquid Theme Tag for loop range iteration"
 	},
 	"Liquid Theme Tags: Loops Reversed": {
-		"prefix": "`reversed",
+		"prefix": "`:reversed",
 		"body": " reversed",
 		"description": "Liquid Theme Tag for loop reversed iteration"
 	},
 	"Liquid Theme Tags: Loops ifchanged": {
-		"prefix": "`ifchanged",
+		"prefix": "`:ifchanged",
 		"body": [
 			"ifchanged",
 			"\t$0",
@@ -1700,7 +1700,7 @@
 		"description": "The ifchanged tag is typically called inside a {% for %} loop because it executes a block of code but only outputs the result if this is the first time it was called or if the previous call had a different result."
 	},
 	"Liquid Theme Tags: Loops TableRow": {
-		"prefix": "`tablerow",
+		"prefix": "`:tablerow",
 		"body": [
 			"<table>",
 			"\ttablerow $1 in $2 cols:$3 limit:$4 offset:$5",
@@ -1711,47 +1711,47 @@
 		"description": "Liquid Theme Tag tablerow iteration"
 	},
 	"Liquid Theme Tags: Loops Columns": {
-		"prefix": "`cols",
+		"prefix": "`:cols",
 		"body": "cols:$0",
 		"description": "Liquid Theme Tag tablerow column only"
 	},
 	"Liquid Theme Tags: Render": {
-		"prefix": "`render",
+		"prefix": "`:render",
 		"body": "render '$1'",
 		"description": "Liquid Theme Tag Render"
 	},
 	// TAGS INCLUDE
 	"Liquid Theme Tags: Include": {
-		"prefix": "`include",
+		"prefix": "`:include",
 		"body": "include $1",
 		"description": "Liquid Theme Tag Include"
 	},
 	"Liquid Theme Tags: Include With": {
-		"prefix": "`includewith",
+		"prefix": "`:includewith",
 		"body": "include $1 with $2",
 		"description": "Liquid Theme Tag Include a template with a local variable named the same as partial file name"
 	},
 	"Liquid Theme Tags: Include For": {
-		"prefix": "`includefor",
+		"prefix": "`:includefor",
 		"body": "include $1 for $2",
 		"description": "Liquid Theme Tag Render partial for every item in the collection"
 	},
 
 	// TAGS THEME
 	"Liquid Theme: Echo": {
-		"prefix": "`echo",
+		"prefix": "`:echo",
 		"body": "echo $1",
 		"description": "Liquid Theme Tag Echo"
 	},
     
 	// TAGS PLATFORMOS
 	"Liquid Theme pOS Tags: background": {
-		"prefix": "`background",
+		"prefix": "`:background",
 		"body": "background '${1:options hash}'",
 		"description": "Invokes code within the tag asynchronously, in the background. You will only have access to variables you explicitly pass to the background tag."
 	},
 	"Liquid Theme pOS Tags: cache": {
-		"prefix": "`cache",
+		"prefix": "`:cache",
 		"body": [
 			"cache",
 			"\t'${1:key}', expire: ${2:integer}, $3",
@@ -1760,7 +1760,7 @@
 		"description": "Checks if there's html cached for the given key. If yes, it just returns the value without processing anything inside the cache tag, otherwise it executes code, stores the result in the cache."
 	},
 	"Liquid Theme pOS Tags: content_for": {
-		"prefix": "`content_for",
+		"prefix": "`:content_for",
 		"body": [
 			"content_for",
 			"\t'${1:Yield}' $2",
@@ -1769,12 +1769,12 @@
 		"description": "Adds specified content to Layout"
 	},
 	"Liquid Theme pOS Tags: export": {
-		"prefix": "`export",
+		"prefix": "`:export",
 		"body": "export ${1:variable_names}, namespace: '${2:namespace}'",
 		"description": "Exports and makes avaiable variables from an include with local scope outside the partial. Used in conjunction with context.exports"
 	},
 	"Liquid Theme pOS Tags: form": {
-		"prefix": "`form",
+		"prefix": "`:form",
 		"body": [
 			"form html-id: '${1:someid}', html-novalidate: true, html-class: '${2:class}', html-data-user-id: '${3:someid}', html-multipart: false ",
 			"\t{{ form_builder }}",
@@ -1783,67 +1783,67 @@
 		"description": "used to generate a html form element for a resource. Use within form configuration. Inside the tag you can use form_builder variable."
 	},
 	"Liquid Theme pOS Tags: function": {
-		"prefix": "`function",
+		"prefix": "`:function",
 		"body": "function ${1:my_varibale} = $2",
 		"description": "Allows to store a variable returned by a partial. Partial needs to return data with `return` tag."
 	},
 	"Liquid Theme pOS Tags: graphql": {
-		"prefix": "`graphql",
+		"prefix": "`:graphql",
 		"body": "graphql \"${1:query_name}\", result_name: \"${2:default g}\"",
 		"description": "execute GraphQL query stored in a file or invoke GraphQL query inline."
 	},
 	"Liquid Theme pOS Tags: hash_assign": {
-		"prefix": "`hash_assign",
+		"prefix": "`:hash_assign",
 		"body": "hash_assign ${1:my_variable[\"a\"][\"b\"]}",
 		"description": "Allows to easily modify a Hash with a syntax same as assign tag."
 	},
 	"Liquid Theme Tags: Include Form": {
-		"prefix": "`include_form",
+		"prefix": "`:include_form",
 		"body": "include_form '${1:form_config Name}', resource_id: ${2:Resource id eg user.id}, parent_resource_id: '${3:Resource type eg custom_model_type}'",
 		"description": "Liquid Theme Tag Include_form This tag should be used to render forms defined in app/forms."
 	},
 	"Liquid Theme pOS Tags: log": {
-		"prefix": "`log",
+		"prefix": "`:log",
 		"body": "log ${1:any object to be printed}, type: '${2|error,info,debug|}', env: '${3|staging,production,all|}'",
 		"description": "log Print any information to instance logs"
 	},
 	"Liquid Theme pOS Tags: print": {
-		"prefix": "`print",
+		"prefix": "`:print",
 		"body": "print ${1:variable}",
 		"description": "Print variable, skipping any additional sanitization. It provides a way to display a variable which consists of both safe and unsafe html."
 	},
 	"Liquid Theme pOS Tags: redirect_to": {
-		"prefix": "`redirect_to",
+		"prefix": "`:redirect_to",
 		"body": "redirect_to '${1:path or url}${2|' ,'\\, status: 301 |}",
 		"description": "Redirects browser to target."
 	},
 	"Liquid Theme pOS Tags: response_status": {
-		"prefix": "`response_status",
+		"prefix": "`:response_status",
 		"body": "response_status ${1|200,204,400|}",
 		"description": "Allows you to set HTTP status for the response. Default 200."
 	},
 	"Liquid Theme pOS Tags: return": {
-		"prefix": "`return",
+		"prefix": "`:return",
 		"body": "return ${1:variable}",
 		"description": "Used inside a partial invoked by a function tag to return a variable"
 	},
 	"Liquid Theme pOS Tags: session": {
-		"prefix": "`session",
+		"prefix": "`:session",
 		"body": "session ${1:variable} = ${2:data}",
 		"description": "stores data during user's session Sets field of given name to given value in context.session"
 	},
 	"Liquid Theme pOS Tags: spam_protection default": {
-		"prefix": "`spam_protection_default",
+		"prefix": "`:spam_protection_default",
 		"body": "spam_protection",
 		"description": "spam_protection Generates html for recaptcha_v2 spam protection"
 	},
 	"Liquid Theme pOS Tags: spam_protection": {
-		"prefix": "`spam_protection",
+		"prefix": "`:spam_protection",
 		"body": "spam_protection \"${1:strategy}\", action: \"${2:action}\"",
 		"description": "spam_protection Generates html for recaptcha spam protection"
 	},
 	"Liquid Theme pOS Tags: yield": {
-		"prefix": "`yield",
+		"prefix": "`:yield",
 		"body": "yield '${0:Content_for name}'",
 		"description": "yield Execute code wrapped inside content_for {% content_for 'content_for_name' %}"
 	},
