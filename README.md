@@ -31,9 +31,13 @@ Go to user settings and add the following:
 ```
 
 ## Usage
-Type part of a snippet, press `enter`, and the snippet unfolds.
+Type part of a snippet, press `Enter`, and the snippet unfolds.
 
 Alternatively, press `Ctrl`+`Space` (Windows, Linux) or `Cmd`+`Space` (OSX) to activate snippets from within the editor.
+
+## Tip
+Using `Tab` and disabling `Enter` for accepting suggestions can avoid ambiguity between inserting new lines or accepting the suggestions. 
+**Settings** `"editor.acceptSuggestionOnEnter": "off"`
 
 #### Liquid
 Whitespace control is add for all snippets. And can be removed when needed by deleting the - inside liquid tags.
