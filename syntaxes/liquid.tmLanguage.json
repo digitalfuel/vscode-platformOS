@@ -176,7 +176,7 @@
 				"name": "entity.name.tag.liquid"
 			},
 			{
-				"match": "(echo|case|when|else|endcase|increment|decrement|cycle)",
+				"match": "(echo|break|continue|case|when|else|elsif|endcase|increment|decrement|cycle)",
 				"name": "entity.name.tag.liquid"
 			},
 
