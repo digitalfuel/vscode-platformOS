@@ -163,6 +163,10 @@
 				"name": "comment.block.liquid"
 			},
 			{
+				"match": "(#.+)",
+				"name": "comment.block.liquid"
+			},
+			{
 				"match": "(if|unless|for|paginate|capture|form|tablerow|raw|endif|endunless|endfor|endpaginate|endcapture|endform|endtablerow|endraw)",
 				"name": "entity.name.tag.liquid"
 			},
