@@ -1,6 +1,6 @@
 # Deprecation Notice
 This extension with be merging with the official PlatformOS extension for vscode over the coming months. The new extension can be found here https://marketplace.visualstudio.com/items?itemName=platformOS.platformos-check-vscode 
-The idea is to deprecate the first one to have one official platformOS extension to avoid confusion. Before doing it, we'd like to understand who's using this extension and what features should be transferred into the new one before moving forward with the deprecation.
+The idea is to deprecate this extension and have one official platformOS extension to avoid confusion. Before doing this, the Platform-OS team would like to understand who's using this extension and what features should be transferred into the new one before moving forward with the deprecation.
 If you have any requests for features to be transferred please go to the new extension and make a request there.
 
 # platformOS - VS Code extension
